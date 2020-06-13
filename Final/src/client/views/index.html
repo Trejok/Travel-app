@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <title>Capstone - Travel App</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+
+  <!-- top -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Travel App</a>
+    </div>
+  </nav>
+
+  <!-- req -->
+  <header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5">Choose your city, your country and when you want to go !</h1>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form class="citySelection">
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                    City :
+                    <input class="form-control form-control-lg" id="city" type="text" name="input" value="" placeholder="City">
+                </div>
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                    Country:
+                    <input class="form-control form-control-lg" id="country" type="text" name="input" value="" placeholder="Country">
+                </div>
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  <label for="depdate">Start date:</label>
+                  <input class="form-control form-control-lg" type="date" id="depdate" name="trip-start"
+                         value= ""
+                         min=""
+                         required>
+                </div>
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  <p> be sure to complete all the fields </p>
+                  <div class="col-12 col-md-3">
+                    <input id="generate" type="submit" class="btn btn-block btn-lg btn-primary" name="" value="Go">
+                  </div>
+                </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- resp -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10">
+          <div class="mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <h3>image location</h3>
+            <div class="mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <img id="url" src="">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class=" mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <h3>weather</h3>
+            <p class="lead mb-0">recent weather and sky analysis.</p>
+            <div class=" mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <p id="results" class="lead mb-0"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="mx-auto mb-0 mb-lg-3">
+            <h3>your travel</h3>
+            <p class="lead mb-0">when are you leaving?</p>
+            <div class="mx-auto mb-0 mb-lg-3">
+              <p id="when" class="lead mb-0"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer bg-light">
+
+  </footer>
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+</script>
+
+
+</body>
+
+</html>
